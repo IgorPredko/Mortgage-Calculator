@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <title>Mortgage calculator</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title"><h1>Mortgage calculator</h1></div>
+      <div class="container">
+        <div class="box">
+          <div class="content">
+            <div class="info-area"><p id="message"></p></div>
+            <div class="form">
+              <div class="inputBox">
+                <input
+                  type="text"
+                  id="loan"
+                  oninput="this.value = this.value.replace(/\D/g, '')"
+                />
+                <i class="fas fa-sack-dollar mortgageAmount"></i>
+                <label for="loan" class="loan-label">Mortgage amount</label>
+              </div>
+
+              <div class="inputBox">
+                <input
+                  type="text"
+                  id="downpayment"
+                  oninput="this.value = this.value.replace(/\D/g, '')"
+                />
+                <i class="fas fa-hand-holding-usd downPayment"></i>
+                <label for="downpayment" class="downpayment-label">Down Payment</label>
+              </div>
+
+              <div class="inputBox">
+                <input
+                  type="text"
+                  id="interest"
+                  oninput="this.value = this.value.replace(/\D/g, '')"
+                />
+                <i class="fas fa-chart-line interestRate"></i>
+                <label for="interest" class="interest-label">Interest rate</label>
+              </div>
+
+              <div class="inputBox">
+                <input
+                  type="text"
+                  id="years"
+                  oninput="this.value = this.value.replace(/\D/g, '')"
+                />
+                <i class="fas fa-chart-pie termInYears"></i>
+                <label for="years" class="years-label">Term in years</label>
+              </div>
+            </div>
+            <div class="calculate-btn">Calculate</div>
+            <div class="clear-btn">Clear</div>
+          </div>
+        </div>
+        <!-- <input
+          type="text"
+          oninput="this.value = this.value.replace(/\D/g, '')"
+        /> -->
+
+        <div class="box box-2">
+          <div class="content output"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
